@@ -15,4 +15,4 @@ const categories = { categories: new schema.Array(category)}
 
 const normalizedData = normalize(api, categories);
 
-export default normalizedData;P
+export default normalizedData;
