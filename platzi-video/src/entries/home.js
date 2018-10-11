@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducer from './../reducers';
 import { Map as map } from 'immutable';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 // function logger({ dispatch, getState }) {
@@ -34,7 +35,7 @@ const store = createStore(
   reducer,
   map(),
   composeWithDevTools(
-    applyMiddleware(logger, logger_)
+    applyMiddleware(logger, thunk)
   )
 )
 
